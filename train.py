@@ -74,6 +74,10 @@ def main():
 
     accuracy = model.score(x_test, y_test)
     run.log("Accuracy", np.float(accuracy))
+    
+    # Save model
+    os.makedirs('./outputs', exist_ok=True)
+    joblib.dump(value=model, filename='./outputs/best_run.joblib')
 
 if __name__ == '__main__':
     main()
