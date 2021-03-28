@@ -77,7 +77,7 @@ def main():
     
     # Save model
     os.makedirs('./outputs', exist_ok=True)
-    joblib.dump(value=model, filename='./outputs/best_run.joblib')
+    joblib.dump(value=model, filename='./outputs/model.joblib')
 
 if __name__ == '__main__':
     main()
